@@ -1,2 +1,2 @@
-# GiftNkabinde.github.io
+# GiftSibusiso.github.io
 Portfolio site
