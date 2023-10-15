@@ -1,0 +1,40 @@
+:root {
+    --primary-color: #1062b4;
+}
+
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+}
+.navbar {
+    background: white;
+    padding: 1em;
+    display: flex;
+    place-content: space-between;
+}
+
+.logo {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#surname {
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+.navItems {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+li {
+    padding: 5px;
+}
