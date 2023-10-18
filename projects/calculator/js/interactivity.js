@@ -31,11 +31,16 @@ for ( let i=0; i<4; i++ ) {
 }
 
 document.querySelector(".btnDel").addEventListener("click", () => {
-    let text = document.querySelector("p").innerText,
+    let text = document.querySelector("p").innerHTML,
         txtLen = text.length;
 
     if (txtLen>1) {
-        document.querySelector("p").innerHTML = text.slice(0, txtLen-1);
+        if (text[text.length-1]==">") {
+            document.querySelector("p").innerHTML = text.slice(0, txtLen-"x<sup>2</sup>".length);
+        } else {
+            document.querySelector("p").innerHTML = text.slice(0, txtLen-1);
+        }
+        
     } else {
         document.querySelector("p").innerHTML = "";
     }
@@ -131,6 +136,7 @@ function xEquation() {
 
 // Returns a list of grouped data
 function extractQuotient (equation) {
+    console.log(equation);
     let quotients = [[], [], []],
         symb = "/*", expression = "",
         isAfter = false;
@@ -185,16 +191,21 @@ function solveEquation(equation) {
     let coefficients = extractQuotient(equation),
         a=0, b=0, c=0, count=0;
 
-    console.log(coefficients)
-
     coefficients.forEach( values => {
         for (let i=0; i<values.length; i++) {
             count===0 ? a+=values[i] : count===1 ? b+=values[i] : c+=values[i];
         }
         count++;
     } )
+
+    if (a!=0) {
+        const x1 = parseFloat((-b+Math.sqrt(Math.pow(b, 2) - 4*a*c))/(2*a)).toFixed(2),
+              x2 = parseFloat((-b-Math.sqrt(Math.pow(b, 2) - 4*a*c))/(2*a)).toFixed(2);
+        return x1+""=="NaN" ? "Undefined" : x1===x2 ? "x=" + x1 : `x=${x1} | x=${x2}`
+    }
+    const x = -c/b;
     
-    return ( a!=0 ) ? (-b+Math.sqrt(Math.pow(b, 2) - 4*a*c))/(2*a) : -c/b;
+    return (x+"" == "NaN") ? "Undefined": x;
 }
 
 // ======================================================================================================================================
