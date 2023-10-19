@@ -6,10 +6,12 @@ const button = document.querySelector("button"),
         "Divide": "÷", 
         "Mult": "×"
       };
+let answerAvail = false;
 
 for ( let i=0; i<10; i++ ) {
     document.querySelector(".btn"+i).addEventListener("click", () => {
         document.querySelector(".equation").innerHTML += i;
+        clearAnswer();
     })
 }
 
@@ -23,26 +25,27 @@ for ( let i=0; i<4; i++ ) {
         console.log(input)
         if ( "+-×÷".includes(input[input.length-1]) ) {
             input = input.slice(0, input.length-1) + operator[operators[i]];
-            document.querySelector("p").innerHTML = input;
+            document.querySelector(".equation").innerHTML = input;
         } else {
-            document.querySelector("p").innerHTML += operator[operators[i]];
+            document.querySelector(".equation").innerHTML += operator[operators[i]];
         }
+        clearAnswer();
     });
 }
 
 document.querySelector(".btnDel").addEventListener("click", () => {
-    let text = document.querySelector("p").innerHTML,
+    let text = document.querySelector(".equation").innerHTML,
         txtLen = text.length;
 
     if (txtLen>1) {
         if (text[text.length-1]==">") {
-            document.querySelector("p").innerHTML = text.slice(0, txtLen-"x<sup>2</sup>".length);
+            document.querySelector(".equation").innerHTML = text.slice(0, txtLen-"x<sup>2</sup>".length);
         } else {
-            document.querySelector("p").innerHTML = text.slice(0, txtLen-1);
+            document.querySelector(".equation").innerHTML = text.slice(0, txtLen-1);
         }
         
     } else {
-        document.querySelector("p").innerHTML = "";
+        document.querySelector(".equation").innerHTML = "";
     }
 })
 
@@ -52,16 +55,19 @@ document.querySelector(".btnEqual").addEventListener("click", () => {
     if (results.includes("=") || results.includes(",")) {
         alert("Click 'sol' to solve equation");
     } else if (results.includes("X")) {
-        document.querySelector("p").innerHTML += "=";
+        document.querySelector(".equation").innerHTML += "=";
+        clearAnswer();
     } else {
         document.querySelector(".result").innerHTML = results !== undefined ? eval(validateEquation()) : "";
+        answerAvail = true;
     }
 })
 
 document.querySelector(".btnDot").addEventListener("click", function () {
-    let text = document.querySelector("p").innerText;
+    let text = document.querySelector(".equation").innerText;
     if (text[text.length-1] !== "." && !lastValue(text).includes("."))
-    document.querySelector("p").innerHTML += ".";
+    document.querySelector(".equation").innerHTML += ".";
+    clearAnswer()
 })
 
 document.querySelector(".btnSolve").addEventListener("click", function () {
@@ -71,21 +77,32 @@ document.querySelector(".btnSolve").addEventListener("click", function () {
     } else {
         document.querySelector(".result").innerHTML = solveEquation(equation);
     }
+
+    answerAvail = true;
 })
 
 document.querySelector(".btnX").addEventListener("click", () => {
-    document.querySelector("p").innerHTML += "X";
+    document.querySelector(".equation").innerHTML += "X";
+    clearAnswer()
 })
 
 document.querySelector(".btnX2").addEventListener("click", () => {
-    document.querySelector("p").innerHTML += "X<sup>2</sup>";
+    document.querySelector(".equation").innerHTML += "X<sup>2</sup>";
+    clearAnswer()
 })
 
 document.querySelector(".btnComma").addEventListener("click", () => {
-    let text = document.querySelector("p").innerText;
+    let text = document.querySelector(".equation").innerText;
     if (text[text.length-1] !== ",")
-    document.querySelector("p").innerHTML += ",";
+    document.querySelector(".equation").innerHTML += ",";
+    clearAnswer()
 })
+
+function clearAnswer() {
+    if (answerAvail)
+    document.querySelector(".result").innerHTML = "";
+    answerAvail = false;
+}
 
 function isLastInputOperator( expression ) {
     return operators.includes(expression[expression.length-1]);

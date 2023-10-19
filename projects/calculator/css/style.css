@@ -1,11 +1,56 @@
+:root {
+    --disp: #001524;
+}
+
+body {
+    background-color: #183D3D;
+}
+
 table {
+    margin-top: 2em;
     display: flex;
     justify-content: center;
+}
+
+.displayRes {
+    background-color: aliceblue;
+    color: black;
+    border-bottom: var(--disp) solid 5px ;
+    border-left: var(--disp) solid 5px;
+    border-right: var(--disp) solid 5px;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+.displayEq {
+    background-color: aliceblue;
+    color: black;
+    border-top: var(--disp) solid 5px ;
+    border-left: var(--disp) solid 5px;
+    border-right: var(--disp) solid 5px;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
 }
 
 button {
     width: 40px;
     height: 40px;
-    border: 3px solid;
+    border: 3px solid #008170;
     border-radius: 15px;
+    font-size: 20px;
+    color: white;
+    background-color: #282A3A;
+}
+
+button:hover {
+    background-color: #735F32;
+}
+
+.equation {
+    text-align: left;
+}
+
+.result {
+    display: flex;
+    justify-content: right;
 }
