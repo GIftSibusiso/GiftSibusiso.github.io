@@ -4,20 +4,39 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="css/navigation_styles.css">
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <div class="navbar">
-            <a href="#" class="logo">SIBUSISO<span id="surname">NKABINDE</span></a>
+        <main>
+            <div class="navbar">
+                <div class="container">
+                    <a href="#" class="logo">SIBUSISO<span id="surname">NKABINDE</span></a>
+                    <img src="images/burger-menu.svg" alt="menu bar" class="mobile-menu">
+                    <nav>
+                        <img src="images/close-menu.svg" alt="close menu" class="close-menu">
+                        <ul class="navItems">
+                            <li><a href="#" class="nav-list">About</a></li>
+                            <li><a href="#projects" class="nav-list">Projects</a></li>
+                            <li><a href="#" class="nav-list">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
 
-            <nav>
-                <ul class="navItems">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </nav>
-        </div>
+            <section id="introduction">
+                <h1>Hi there</h1>
+                <p><i><b>This is currently in progress but in the meantime explore my project</b></i></p>
+            </section>
 
-        <a href="projects/calculator/calc.html">Calculator</a>
+            <div id="projects">
+                <h3>Projects</h3>
+                <ol>
+                    <li><a href="projects/calculator/calc.html">Calculator</a></li>
+                </ol>
+            </div>
+        </main>
+
+        <script src="js/interactivity.js"></script>
     </body>
 </html>
