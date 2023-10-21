@@ -22,7 +22,7 @@ document.querySelector(".btnC").addEventListener("click", () => {
 for ( let i=0; i<4; i++ ) {
     document.querySelector(".btn"+operators[i]).addEventListener("click", () => {
         let input = document.querySelector(".equation").innerText;
-        console.log(input)
+        
         if ( "+-×÷".includes(input[input.length-1]) ) {
             input = input.slice(0, input.length-1) + operator[operators[i]];
             document.querySelector(".equation").innerHTML = input;
@@ -142,9 +142,19 @@ function validateEquation() {
 }
 
 function xEquation() {
-    let equation = document.querySelector(".equation").innerHTML;
+    let equation = document.querySelector(".equation").innerHTML, count = 0;
+    
+    for (let i=0; i<equation.length; i++) {
+        if (equation[i]==="s") {
+            count++
+        }
+    }
 
-    return equation.replace("<sup>2</sup>", "xx")
+    for (let i=0; i<count/2; i++) {
+        equation = equation.replace("<sup>2</sup>", "xx");
+    }
+
+    return equation;
 }
 
 // ===============================================================================================================
@@ -152,8 +162,7 @@ function xEquation() {
 // Solves for x but the equation must not contain symbols [/,*]
 
 // Returns a list of grouped data
-function extractQuotient (equation) {
-    console.log(equation);
+function extractCoefficients (equation) {
     let quotients = [[], [], []],
         symb = "/*", expression = "",
         isAfter = false;
@@ -205,7 +214,7 @@ function getValue(exp, isAfterEqualSign) {
 }
 
 function solveEquation(equation) {
-    let coefficients = extractQuotient(equation),
+    let coefficients = extractCoefficients(equation),
         a=0, b=0, c=0, count=0;
 
     coefficients.forEach( values => {
