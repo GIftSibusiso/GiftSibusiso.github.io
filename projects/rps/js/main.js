@@ -38,6 +38,7 @@ function input(displayText) {
 }
 
 function validateResults(robot, player) {
+    player = player.trim();
     if( 
         (robot === options[0] && player.toLowerCase() === options[1]) ||
         (robot === options[1] && player.toLowerCase() === options[2]) ||
