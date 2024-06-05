@@ -1,0 +1,28 @@
+body {
+    background-color: #023eb4;
+    color: #ffffff;
+    font-family: "Montserrat", "apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 40%;
+    height: auto;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+
+h1 {
+    font-weight: 700;
+    line-height: 1.2;
+}
