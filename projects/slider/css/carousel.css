@@ -7,11 +7,9 @@
 .slide {
   background-color: white;
   border-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   position: absolute;
   top: 0px;
-  left: 25px;
+  left: 7.14%;
   max-width: 350px;
   margin: auto;
   text-align: center;
