@@ -1,0 +1,106 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.9);
+    animation: hide-animation 7s forwards;
+}
+
+.loading-img img {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    border-radius: 50%;
+    animation: load-img-animation 5s linear infinite;
+}
+
+.loading-indicator {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centering */
+    width: 200px;
+    height: 200px;
+    border: 1px dashed #fff;
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+}
+
+.loading-indicator1, .loading-indicator2 {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    width: 180px;
+    height: 180px;
+    border: 1px dashed #fff;
+    border-radius: 50%;
+    animation: rotateAnti 10s linear infinite;
+}
+
+.loading-indicator2 {
+    width: 220px;
+    height: 220px;
+}
+
+.loading-container button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(51, 51, 51, 0);
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.loading-container button:hover {
+    background-color: rgba(97, 97, 97, 0.9);
+    cursor: pointer;
+}
+
+@keyframes load-img-animation {
+    0% {
+        width: 150px;
+    }
+    50% {
+        width: 75px;
+    }
+    100% {
+        width: 150px;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateAnti {
+    from {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@keyframes hide-animation {
+    0% { transform: translateY(0); opacity: 1; }
+    90% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(400px); opacity: 0; visibility: hidden; }
+}
