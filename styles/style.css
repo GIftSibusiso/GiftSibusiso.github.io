@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f172a;
+}
+
+.logo {
+    padding: 15px;
+    color: #4cff7c;
+}
+
+.logo span {
+    color: #4cf6ff;
+}
