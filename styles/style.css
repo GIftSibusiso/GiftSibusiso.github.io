@@ -4,11 +4,50 @@ body {
     background-color: #0f172a;
 }
 
+.mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
 .logo {
-    padding: 15px;
     color: #4cff7c;
+    font-family: 'Sofia';
 }
 
 .logo span {
     color: #4cf6ff;
+}
+
+.top, .bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 22px;
+}
+
+.top {
+    margin-bottom: 2px;
+}
+
+.top-left, .top-right, .bottom-left, .bottom-right {
+    width:8px;
+    height: 8px;
+    border-radius: 3px;
+    border: 1px solid #4cff7c;
+}
+
+.top-left {
+    border-top-left-radius: 0px;
+}
+
+.top-right {
+    border-top-right-radius: 0px;
+}
+
+.bottom-left {
+    border-bottom-left-radius: 0px;
+}
+
+.bottom-right {
+    border-bottom-right-radius: 0px;
 }
