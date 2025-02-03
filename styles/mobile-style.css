@@ -1,17 +1,15 @@
 @media (max-width: 768px) {
     .first-section-content h1{
-        font-size: 36px;
+        font-size: 30px;
     }
     
     .first-section-content p, .first-section-content button {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .first-section-content {
-        position: absolute;
-        top: 10vh;
-        left: 0;
+        top: 18vh;
         margin: 20px;
-        width: 100%;
+        width: 90%;
     }
   }
