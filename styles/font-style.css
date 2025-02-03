@@ -1,9 +1,12 @@
 .first-section-content h1{
+    color: #e2e8f0;
     font-size: 46px;
 }
 
 .first-section-content p, .first-section-content button {
+    color: #e2e8f0;
     font-size: 22px;
+    margin-bottom: 35px;
 }
 
 .first-section-content button {
@@ -16,5 +19,11 @@
 }
 
 .first-section-content button span {
-    margin-left: 10px;
+    margin-left: 15px;
+}
+
+.first-section-content button:hover {
+    border-color: #4cff7c;
+    color: #4cff7c;
+    cursor: pointer;
 }

@@ -1,6 +1,6 @@
-* {
+/* * {
     color: #e2e8f0;
-}
+} */
 
 body {
     margin: 0;
@@ -11,12 +11,14 @@ body {
 .mobile-nav {
     display: flex;
     justify-content: space-between;
-    padding: 8px;
+    align-items: center;
+    height: 10vh;
 }
 
 .logo {
     color: #4cff7c;
     font-family: 'Sofia';
+    font-size: 20px;
 }
 
 .logo span {
@@ -93,9 +95,49 @@ main {
 
 .first-section-content {
     position: absolute;
-    top: 200px;
+    top: 20vh;
     left: 0;
-    margin: 30px;
-    width: 80%;
+    margin: 50px;
+    width: 85%;
     z-index: 100;
+}
+
+.social-links {
+    display: flex;
+    width: 150px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.social-links .icon {
+    margin-right: 15px;
+}
+
+.social-links .icon:hover {
+    cursor: pointer;
+}
+
+.mail-icon {
+    color: #4cf6ff;
+    font-size: 24px;
+    margin: -6px 0 0 0;
+}
+
+.whatsapp-icon {
+    width: 31px;
+}
+
+.icon-border {
+    padding: 7px;
+    border: 2px solid #4cf6ff;
+    border-radius: 50%;
+}
+
+.icon-border:hover {
+    border-color: #4cff7c;
+}
+
+.email-icon-container {
+    margin-right: 15px;
 }

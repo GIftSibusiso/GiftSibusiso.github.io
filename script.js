@@ -30,4 +30,4 @@ function shuffleSectionBackground () {
     });
 }
 
-setInterval(shuffleSectionBackground, 3000);
+setInterval(shuffleSectionBackground, 2000);
