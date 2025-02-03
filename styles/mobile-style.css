@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+    .first-section-content h1{
+        font-size: 36px;
+    }
+    
+    .first-section-content p, .first-section-content button {
+        font-size: 18px;
+    }
+
+    .first-section-content {
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        margin: 20px;
+        width: 100%;
+    }
+  }
