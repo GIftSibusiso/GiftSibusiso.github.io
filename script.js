@@ -30,4 +30,10 @@ function shuffleSectionBackground () {
     });
 }
 
+for (let i=0; i<46; i++) {
+    let bluredDiv = document.createElement("div");
+    document.querySelector(".first-section-background").appendChild(bluredDiv);
+}
+
+
 setInterval(shuffleSectionBackground, 2000);
