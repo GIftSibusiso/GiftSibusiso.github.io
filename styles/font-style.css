@@ -1,12 +1,20 @@
 .first-section-content h1{
     color: #e2e8f0;
     font-size: 46px;
+    margin: 0;
+    padding: 0;
 }
 
 .first-section-content p, .first-section-content button {
     color: #e2e8f0;
     font-size: 22px;
     margin-bottom: 35px;
+}
+
+.first-section-content h2 {
+    color: #e2e8f0;
+    margin: 0;
+    padding: 0;
 }
 
 .first-section-content button {
