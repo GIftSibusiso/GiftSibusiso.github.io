@@ -17,7 +17,7 @@
     padding: 0;
 }
 
-.first-section-content button {
+.first-section-content button, .about-section button {
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -51,4 +51,21 @@
 
 .about-section .my-name {
     font-size: 28px;
+}
+
+.about-section button {
+    color: #e2e8f0;
+    font-size: 18px;
+    margin-bottom: 35px;
+    padding: 10px;
+}
+
+.about-section button .material-icons {
+    margin-right: 15px;
+}
+
+.about-section button:hover {
+    color: #4cff7c;
+    border-color: #4cff7c;
+    cursor: pointer;
 }
