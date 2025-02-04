@@ -22,7 +22,7 @@
     align-items: center;
     background-color: transparent;
     padding: 15px;
-    border: 1px solid #e2e8f0;
+    border: 2px solid #e2e8f0;
     border-radius: 30px;
 }
 
@@ -45,7 +45,7 @@
     font-size: 22px;
 } 
 
-.about-section .section-header h2 {
+.about-section .section-header h2, .projects .section-header h2 {
     font-size: 36px;
 }
 

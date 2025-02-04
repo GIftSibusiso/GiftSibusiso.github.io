@@ -1,6 +1,3 @@
-/* * {
-    color: #e2e8f0;
-} */
 
 body {
     margin: 0;
@@ -146,8 +143,6 @@ main {
 .about-section {
     margin: 0 50px;
     padding: 25px;
-    /* background-color: rgb(51, 51, 51); */
-    border-radius: 30px;
 }
 
 .about-container {
@@ -213,4 +208,37 @@ main {
 
 .stack .icon-background {
     background-color: #4cff7c;
+}
+
+.projects {
+    color: #e2e8f0;
+    margin: 50px;
+}
+
+.projects-container .project {
+    display: flex;
+    align-items: center;
+    max-height: 350px;
+    overflow: hidden;
+    padding: 15px;
+    border: 2px solid #4cf6ff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px #84f9ff;
+    transition: transform 0.3s ease;
+}
+
+.projects-container .project .project-image {
+    margin-right: 15px;
+}
+
+.projects-container .project img {
+    max-width: 150px;
+}
+
+.projects-container .project:hover {
+    color: #4cff7c;
+    border-color: #4cff7c;
+    transform: translate(10px, -10px);
+    box-shadow: 0 8px 16px #60fb8a;
+    cursor: pointer;
 }
