@@ -144,7 +144,7 @@ main {
 }
 
 .about-section {
-    margin: 50px 50px 50px 50px;
+    margin: 0 50px;
     padding: 25px;
     /* background-color: rgb(51, 51, 51); */
     border-radius: 30px;
@@ -193,4 +193,24 @@ main {
 
 .section-header {
     text-align: center;
+}
+
+.about-section .stack {
+    text-align: center;
+}
+
+.about-section .stack span {
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    height: 40px;
+}
+
+.about-section .stack img {
+    max-height: 40px;
+    width: auto;
+}
+
+.stack .icon-background {
+    background-color: #4cff7c;
 }
