@@ -1,6 +1,10 @@
 @media (max-width: 768px) {
     .first-section-content h1{
-        font-size: 30px;
+        font-size: 26px;
+    }
+
+    .first-section-content h2{
+        font-size: 20px;
     }
     
     .first-section-content p, .first-section-content button {
