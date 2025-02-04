@@ -16,4 +16,38 @@
         margin: 20px;
         width: 90%;
     }
+
+    .skillset .header .heading {
+        font-weight: bold;
+        font-size: 18px;
+    } 
+    
+    .about-section .section-header h2 {
+        font-size: 26px;
+    }
+    
+    .about-section .my-name {
+        font-size: 20px;
+    }
+
+    .about-section {
+        margin: 0 25px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .about-container {
+        display: block;
+    }
+
+    .about-container .description {
+        width: 100%;
+        padding-right: 10px;
+    }
+
+    .about-container .skillset {
+        border-top: 1px solid #4cf6ff;
+        border-left: none;
+        padding-top: 15px;
+    }
   }

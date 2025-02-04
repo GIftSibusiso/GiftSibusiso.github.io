@@ -35,3 +35,20 @@
     color: #4cff7c;
     cursor: pointer;
 }
+
+.about-section {
+    color: #e2e8f0;
+}
+
+.skillset .header .heading {
+    font-weight: bold;
+    font-size: 22px;
+} 
+
+.about-section .section-header h2 {
+    font-size: 46px;
+}
+
+.about-section .my-name {
+    font-size: 36px;
+}

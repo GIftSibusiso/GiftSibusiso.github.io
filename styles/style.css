@@ -68,7 +68,7 @@ main {
     height: 90vh;
     overflow: hidden;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 
 .first-section-background div {
@@ -100,7 +100,7 @@ main {
     left: 0;
     margin: 50px;
     width: 85%;
-    z-index: 100;
+    z-index: 2;
 }
 
 .social-links {
@@ -141,4 +141,56 @@ main {
 
 .email-icon-container {
     margin-right: 15px;
+}
+
+.about-section {
+    margin: 50px 50px 50px 50px;
+    padding: 25px;
+    /* background-color: rgb(51, 51, 51); */
+    border-radius: 30px;
+}
+
+.about-container {
+    display: flex;
+}
+
+.about-container .description {
+    width: 50%;
+    padding-right: 10px;
+}
+
+.about-container .skillset {
+    padding-left: 15px;
+    border-left: 1px solid #4cf6ff;
+}
+
+.skillset .education {
+    margin-left: 40px;
+}
+
+.skillset ul {
+    margin-left: 20px;
+}
+
+.skillset .header {
+    display: flex;
+    align-items: center;
+}
+
+.skillset .header .material-icons {
+    margin-right: 15px;
+}
+
+.skillset .education h3, .skillset .education h4, .skillset .education p {
+    margin: 0;
+    padding: 0;
+}
+
+.education {
+    margin-bottom: 15px;
+}
+
+
+.section-header {
+    text-align: center;
 }
