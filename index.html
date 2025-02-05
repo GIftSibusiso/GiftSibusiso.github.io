@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="shortcut icon" href="assets/images/myself.jpg" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
     <link rel="stylesheet" href="styles/loading-screen.css">
@@ -151,7 +152,7 @@
                 </span>
 
                 <span>
-                    <img src="assets/logos/django-logo-positive.png" alt="css logo">
+                    <img src="assets/logos/Primary_Horizontal_Lockup_Full_Color_Inverted.png" alt="css logo">
                 </span>
 
                 <span>
@@ -219,8 +220,48 @@
                         </p>
                     </div>
                 </div>
+
+                <div class="project" onclick="window.open('https://giftsibusiso.github.io/edu-connect/');">
+                    <div class="project-image">
+                        <img src="assets/projects-snippets/edu-connect.jpg" alt="project image">
+                    </div>
+
+                    <div>
+                        <h3>EDU CONNECT</h3>
+                        <p>
+                            Edu Connect is an Android mobile application designed to connect learners with valuable educational resources and tutors. With Edu Connect, you can upload books and documents you believe will be helpful, categorize them accordingly, and share them with the community. Tutors can also offer lessons and assist students in any way necessary to help them succeed in their studies. The platform facilitates an easy, collaborative, and supportive learning environment.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="contact-section">
+            <div class="section-header">
+                <h2>Contacts</h2>
+                <p>Looking to collaborate or need a developer for your next project? Let’s connect! Share your details below.</p>
+            </div>
+
+            <form action="/submit" method="POST">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Full Name" class="text-input" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email Address" class="text-input" required>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="4" placeholder="Message" class="text-input" required></textarea>
+                </div>
+
+                <div class="submit-btn">
+                    <button type="submit" id="formSubmition">Join My Network</button>
+                </div>
+              </form>
+        </div>
+
+        <hr style="margin-bottom: 50px;">
     </main>
     
     <script src="script.js"></script>

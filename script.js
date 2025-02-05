@@ -37,3 +37,9 @@ for (let i=0; i<46; i++) {
 
 
 setInterval(shuffleSectionBackground, 2000);
+
+async function sendForm() {
+    const header = {
+        "app":"application/json"
+    }
+}

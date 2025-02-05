@@ -188,6 +188,7 @@ main {
 
 .section-header {
     text-align: center;
+    color: #e2e8f0;
 }
 
 .about-section .stack {
@@ -222,9 +223,10 @@ main {
     overflow: hidden;
     padding: 15px;
     border: 2px solid #4cf6ff;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 0 4px 6px #84f9ff;
     transition: transform 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .projects-container .project .project-image {
@@ -241,4 +243,59 @@ main {
     transform: translate(10px, -10px);
     box-shadow: 0 8px 16px #60fb8a;
     cursor: pointer;
+}
+
+input, textarea {
+    width: 100%;
+    border-radius: 15px;
+    border-width: 2px;
+    color: #e2e8f0;
+    background-color: #0f172a;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-family: 18;
+}
+
+textarea {
+    height: 150px;
+}
+
+#formSubmition {
+    border: 2px solid #4cff7c;
+    border-radius: 15px;
+    background-color: #0f172a;
+    color: #4cff7c;
+    padding: 8px;
+}
+
+#formSubmition:hover {
+    color: #4cf6ff;
+    border-color: #4cf6ff;
+    cursor: pointer;
+}
+
+.submit-btn {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.text-input:focus {
+    border-color: #4cf6ff;
+}
+
+.text-input:valid {
+    border-color: #4cff7c;
+}
+
+.text-input:invalid {
+    border-color: #ff4c4c;
+}
+
+.contact-section .section-header h2, .projects .section-header h2 {
+    margin-bottom: 2px;
+}
+
+.contact-section .section-header p, .projects .section-header p {
+    margin-top: 2px;
+    margin-bottom: 20px;
 }

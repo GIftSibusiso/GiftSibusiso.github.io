@@ -45,7 +45,7 @@
     font-size: 22px;
 } 
 
-.about-section .section-header h2, .projects .section-header h2 {
+.section-header h2 {
     font-size: 36px;
 }
 
@@ -69,3 +69,9 @@
     border-color: #4cff7c;
     cursor: pointer;
 }
+
+.contact-section form {
+    width: 80%;
+    margin: 0 auto;
+}
+
