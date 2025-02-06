@@ -12,7 +12,7 @@
     }
 
     .first-section-content {
-        top: 18vh;
+        top: 23vh;
         margin: 20px;
         width: 90%;
     }
@@ -62,6 +62,14 @@
     .projects-container .project img {
         max-width: 100%;
         max-height: 200px;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+
+    .desktop-nav {
+        display: none;
     }
   }
 

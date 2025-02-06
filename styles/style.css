@@ -1,16 +1,51 @@
-
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling for the whole document */
+}
 body {
     margin: 0;
     padding: 0;
     background-color: #0f172a;
 }
 
-.mobile-nav {
+.mobile-nav, .desktop-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 10vh;
     margin: 0 20px
+}
+.mobile-nav {
+    display: none;
+}
+
+.desktop-nav {
+    margin: 0 50px;
+}
+
+.desktop-nav button {
+    background-color: #0f172a;
+    border: none;
+    color: #e2e8f0;
+    font-size: 16px;
+    margin: 10px;
+
+    &:hover {
+        color: #4cff7c;
+        cursor: pointer;
+    }
+}
+
+#contactBtn {
+    color: #4cf6ff;
+    border: 2px solid #4cf6ff;
+    border-radius: 15px;
+    padding: 8px;
+
+    &:hover {
+        color: #4cff7c;
+        border-color: #4cff7c;
+        cursor: pointer;
+    }
 }
 
 .logo {
@@ -93,7 +128,7 @@ main {
 
 .first-section-content {
     position: absolute;
-    top: 20vh;
+    top: 23vh;
     left: 0;
     margin: 50px;
     width: 85%;
@@ -276,7 +311,7 @@ textarea {
 
 .submit-btn {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .text-input:focus {
@@ -298,4 +333,39 @@ textarea {
 .contact-section .section-header p, .projects .section-header p {
     margin-top: 2px;
     margin-bottom: 20px;
+}
+
+.contact-section .social-links {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.nav-popup {
+    display: none;
+    width: 100%;
+    background-color: #0f172a;
+    position: fixed;
+    text-align: center;
+    z-index: 999;
+}
+
+.nav-popup a {
+    color: #e2e8f0;
+    text-decoration: none;
+}
+
+.popup-shade {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0f172a;
+    opacity: 0.8;
+    z-index: 998;
+}
+
+.close-menu {
+    display: none;
+    color: #ff4c4c;
+    font-size: 20px;;
 }

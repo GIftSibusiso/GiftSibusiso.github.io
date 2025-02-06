@@ -2,6 +2,26 @@ document.getElementById("loadingSkipBtn").addEventListener("click", () => {
     document.getElementsByClassName("loading-container")[0].style.display = "none";
 })
 
+document.getElementById("menuBtn").addEventListener("click", () => {
+    document.getElementsByClassName("nav-popup")[0].style.display = "block";
+    document.getElementById("menuBtn").style.display = "none";
+    document.getElementsByClassName("close-menu")[0].style.display = "block";
+})
+
+document.getElementsByClassName("close-menu")[0].addEventListener("click", () => {
+    hideNav()
+})
+
+document.getElementsByClassName("popup-shade")[0].addEventListener("click", () => {
+    hideNav();
+})
+
+function hideNav() {
+    document.getElementsByClassName("nav-popup")[0].style.display = "none";
+    document.getElementsByClassName("close-menu")[0].style.display = "none";
+    document.getElementById("menuBtn").style.display = "block";
+}
+
 
 function randomValues () {
     const values = []
@@ -55,11 +75,11 @@ async function sendForm(fullname, email, message) {
             "display-name": "Portfolio form submission",
             "subject":  "You have someone interested in you!!",
             "content": `
-                Hello Sibusiso,
+Hello Sibusiso,
 
-                From: ${fullname}
-                Email: ${email}
-                Message: ${message}
+From: ${fullname}
+Email: ${email}
+Message: ${message}
             `,
             "html-content": false
         })
@@ -79,3 +99,10 @@ document.getElementById("myForm").addEventListener("submit", async (event) => {
     const formData = new FormData(event.target);
     sendForm(formData.get("name"), formData.get("email"), formData.get("message"))
 })
+
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }

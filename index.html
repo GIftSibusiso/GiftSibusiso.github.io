@@ -30,11 +30,11 @@
         </div>
 
         <nav class="mobile-nav">
-            <div class="logo">
+            <div class="logo"  onclick="hideNav()">
                 Sibusiso <span>Nkabinde</span>
             </div>
         
-            <div class="burger-menu">
+            <div class="burger-menu" id="menuBtn">
                 <div class="top">
                     <div class="top-left"></div>
                     <div class="top-right"></div>
@@ -45,7 +45,28 @@
                     <div class="bottom-right"></div>
                 </div>
             </div>
+
+            <div class="close-menu">X</div>
         </nav>
+
+        <nav class="desktop-nav">
+            <div class="logo">
+                Sibusiso <span>Nkabinde</span>
+            </div>
+
+            <div class="nav-links">
+                <button onclick="window.location.href='#about'">About</button>
+                <button onclick="window.location.href='#projects'">Projects</button>
+                <button id="contactBtn" onclick="window.location.href='#contacts'">Contacts</button>
+            </div>
+        </nav>
+
+        <div class="nav-popup">
+            <a href="#about" onclick="hideNav()">About</a><br><hr>
+            <a href="#projects" onclick="hideNav()">Projects</a><br><hr>
+            <a href="#contacts" onclick="hideNav()">Contacts</a><br><hr>
+            <div class="popup-shade"></div>
+        </div>
 
         <div class="first-section-background">
             <span class="first-section-background-shade"></span>
@@ -58,7 +79,7 @@
                 <p>
                     I'm a passionate software developer focused on building scalable, efficient, and user-centric solutions. With expertise in web development, automation, APIs, and mobile apps, I thrive on creating impactful software. I value collaboration, continuous learning, and staying ahead of industry trends to keep my work innovative and future-ready.
                 </p>
-                <button>
+                <button onclick="window.location.href='#contacts'">
                     <span class="material-icons">subdirectory_arrow_right</span>
                     <span>Work with me today</span>
                 </button>
@@ -90,7 +111,7 @@
             </div>
         </div>
 
-        <div class="about-section">
+        <div class="about-section" id="about">
             <div class="section-header"><h2>About myself</h2></div>
             
             <h2 class="my-name">Sibusiso Nkabinde</h2>
@@ -109,7 +130,7 @@
                         When I'm not coding, you'll find me diving into hackathons, experimenting with emerging tech, and collaborating with like-minded teams to create innovative and impactful solutions.
                     </p>
 
-                    <button>
+                    <button onclick="window.location.href='#contacts'">
                         <span class="material-icons">group_add</span>
                         <span>Let's connect</span>
                     </button>
@@ -201,10 +222,10 @@
             </div>
         </div>
 
-        <div class="projects">
+        <div class="projects" id="projects">
             <div class="section-header">
                 <h2>Projects</h2>
-                <p>I enjoy turning ideas into reality through code. Here’s a collection of projects I’ve built—each one a step in my journey as a developer. From web apps to mobile prototypes, these projects reflect my growth and love for innovation.</p>
+                <p>I enjoy turning ideas into reality through code. Here's a collection of projects I've built each one a step in my journey as a developer. From web apps to mobile prototypes, these projects reflect my growth and love for innovation.</p>
             </div>
 
             <div class="projects-container">
@@ -236,10 +257,36 @@
             </div>
         </div>
 
-        <div class="contact-section">
+        <div class="contact-section" id="contacts">
             <div class="section-header">
                 <h2>Contacts</h2>
                 <p>Looking to collaborate or need a developer for your next project? Let’s connect! Share your details below.</p>
+            </div>
+
+            <div class="social-links">
+                <span class="email-icon-container">
+                    <a href="mailto:nkabinde17sibusiso@gmail.com" target="_blank">
+                        <span class="material-icons icon-border mail-icon">mail</span>
+                    </a>
+                </span>
+
+                <span class="icon">
+                    <a href="https://github.com/GIftSibusiso" target="_blank">
+                        <img src="assets/images/github.png" alt="github icon" class="icon-border">
+                    </a>
+                </span>
+
+                <span class="icon">
+                    <a href="https://linkedin.com/in/sibusiso-nkabinde-589ba5207" target="_blank">
+                        <img src="assets/images/linkedin.png" alt="linkedin" class="icon-border">
+                    </a>
+                </span>
+
+                <span class="icon">
+                    <a href="https://wa.me/+27632026810" target="_blank">
+                        <img src="assets/images/whatsapp.png" alt="whatsapp" class="whatsapp-icon">
+                    </a>
+                </span>
             </div>
 
             <form id="myForm">
@@ -258,7 +305,7 @@
                 <div class="submit-btn">
                     <button type="submit" id="formSubmition">Join My Network</button>
                 </div>
-              </form>
+            </form>
         </div>
 
         <hr style="margin-bottom: 50px;">
