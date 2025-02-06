@@ -38,8 +38,44 @@ for (let i=0; i<46; i++) {
 
 setInterval(shuffleSectionBackground, 2000);
 
-async function sendForm() {
-    const header = {
-        "app":"application/json"
+async function sendForm(fullname, email, message) {
+    const url = "https://stylish-mail.vercel.app/v1/send-email";
+    const key = "SibusisoNkabindeAPIKEYYoullneverget";
+    const headers = {
+        "Content-Type": "application/json",
+        "X-API-Key": key
+    };
+
+
+    const response = await fetch(url, {
+        "headers": headers,
+        "method": "POST",
+        "body": JSON.stringify({
+            "recipient-email": "nkabinde17sibusiso@gmail.com",
+            "display-name": "Portfolio form submission",
+            "subject":  "You have someone interested in you!!",
+            "content": `
+                Hello Sibusiso,
+
+                From: ${fullname}
+                Email: ${email}
+                Message: ${message}
+            `,
+            "html-content": false
+        })
+    })
+
+    if (!response.ok) {
+        alert("Couldn't submit the form, please use email or mobile numbers to contact Sibusiso")
+    } else {
+        alert("Form submitted successfully!!")
     }
 }
+
+
+document.getElementById("myForm").addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    sendForm(formData.get("name"), formData.get("email"), formData.get("message"))
+})

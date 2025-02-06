@@ -50,4 +50,18 @@
         border-left: none;
         padding-top: 15px;
     }
+
+    .projects-container .project {
+        display: block;
+        max-height: none;
+    }
+
+    .projects-container .project-image {
+        text-align: center;
+    }
+    .projects-container .project img {
+        max-width: 100%;
+        max-height: 200px;
+    }
   }
+
