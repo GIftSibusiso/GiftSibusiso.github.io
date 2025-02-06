@@ -39,7 +39,7 @@ for (let i=0; i<46; i++) {
 setInterval(shuffleSectionBackground, 2000);
 
 async function sendForm(fullname, email, message) {
-    const url = "https://stylish-mail.vercel.app/v1/send-email";
+    const url = "https://email-automation-ten.vercel.app/v1/send-email";
     const key = "SibusisoNkabindeAPIKEYYoullneverget";
     const headers = {
         "Content-Type": "application/json",
