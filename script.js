@@ -66,30 +66,41 @@ async function sendForm(fullname, email, message) {
         "X-API-Key": key
     };
 
+    document.getElementsByClassName("api-indicator")[0].style.display = "block";
 
-    const response = await fetch(url, {
-        "headers": headers,
-        "method": "POST",
-        "body": JSON.stringify({
-            "recipient-email": "nkabinde17sibusiso@gmail.com",
-            "display-name": "Portfolio form submission",
-            "subject":  "You have someone interested in you!!",
-            "content": `
-Hello Sibusiso,
-
-From: ${fullname}
-Email: ${email}
-Message: ${message}
-            `,
-            "html-content": false
+    try {
+        const response = await fetch(url, {
+            "headers": headers,
+            "method": "POST",
+            "body": JSON.stringify({
+                "recipient-email": "nkabinde17sibusiso@gmail.com",
+                "display-name": "Portfolio form submission",
+                "subject":  "You have someone interested in you!!",
+                "content": `
+    Hello Sibusiso,
+    
+    From: ${fullname}
+    Email: ${email}
+    Message: ${message}
+                `,
+                "html-content": false
+            })
         })
-    })
 
-    if (!response.ok) {
-        alert("Couldn't submit the form, please use email or mobile numbers to contact Sibusiso")
-    } else {
-        alert("Form submitted successfully!!")
+        document.getElementsByClassName("api-indicator")[0].style.display = "none";
+
+        if (!response.ok) {
+            alert("Couldn't submit the form, please use email or mobile numbers to contact Sibusiso")
+        } else {
+            alert("Form submitted successfully!!")
+        }
+    } catch (e) {
+        document.getElementsByClassName("api-indicator")[0].style.display = "none";
+        alert("Couldn't connect to server, please try other ways of connecting to him")
     }
+    
+
+    
 }
 
 
@@ -105,4 +116,5 @@ function scrollToSection(sectionId) {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+}
+

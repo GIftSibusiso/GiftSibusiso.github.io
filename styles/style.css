@@ -369,3 +369,39 @@ textarea {
     color: #ff4c4c;
     font-size: 20px;;
 }
+
+.api-indicator {
+    display : none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.indicator-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 8px solid #263b6c;
+    border-top:10px solid #4cf6ff;
+    animation: circulator 3s linear infinite;
+}
+
+
+@keyframes circulator {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        border-top-color: #4cff7c;
+    }
+}
