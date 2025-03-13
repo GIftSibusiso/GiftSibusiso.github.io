@@ -3,318 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="shortcut icon" href="assets/images/myself.jpg" type="image/x-icon">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
-    <link rel="stylesheet" href="styles/loading-screen.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/font-style.css">
-    <link rel="stylesheet" href="styles/mobile-style.css">
+    <title>Sibusiso Nkabinde - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="loading-screen.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <div class="loading-container">
-            <div class="loading-img">
-                <img src="assets/images/myself.jpg" alt="Myself">
-            </div>
+    <nav>
+        <div>Sibusiso Nkabinde</div>
+        <ul class="desktop-nav-items">
+            <li><a href="#about">About Myself</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Get in Touch</a></li>
+            <li><a href="#about">Experience</a></li>
+        </ul>
 
-            <div class="loading-indicator"></div>
+        <button id="menuBtn">
+            <span class="material-icons" id="menuIcon">menu</span>
+        </button>
+    </nav>
+    <div class="nav-items">
+        <a href="#about">About Myself</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Get in Touch</a>
+        <a href="#about">Experience</a>
+    </div>
 
-            <div class="loading-indicator1"></div>
-
-            <div class="loading-indicator2"></div>
-
-            <button id="loadingSkipBtn">Skip >>></button>
+    <div class="loading-container">
+        <div class="loading-img">
+            <img src="assets/images/myself.jpg" alt="Myself">
         </div>
 
-        <nav class="mobile-nav">
-            <div class="logo"  onclick="hideNav()">
-                Sibusiso <span>Nkabinde</span>
+        <div class="loading-indicator"></div>
+
+        <div class="loading-indicator1"></div>
+
+        <div class="loading-indicator2"></div>
+
+        <button id="loadingSkipBtn">Skip >>></button>
+    </div>
+
+    <section class="hero">
+        <h1>Hi, I am Sibusiso Nkabinde</h1>
+        <h2>Software Developer &lt;/&gt;</h2>
+        <p>Turning coffee into code and ideas into impactful software. Welcome to my digital playground!</p>
+        <a href="#about" class="cta">Know More About Me</a>
+        <div class="contact-icons">
+            <a href="https://github.com/GIftSibusiso" target="_blank">
+                <img src="assets/images/github.png" alt="">
+            </a>
+            <a href="mailto:nkabinde17sibusiso@gmail.com">
+                <span class="material-icons icon-border mail-icon">mail</span>
+            </a>
+            <a href="https://linkedin.com/in/sibusiso-nkabinde-589ba5207" target="_blank">
+                <img src="assets/images/linkedin.png" alt="">
+            </a>
+            <a href="https://wa.me/+27632026810" target="_blank">
+                <img src="assets/images/whatsapp.png" alt="">
+            </a>
+        </div>
+
+        <div class="code-container">
+            <div class="code-editor" id="codeEditor">
+                <pre><span id="codeContent"></span></pre>
             </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-header">
+            <h2>About Myself</h2>
+            <p>I'm a dedicated full-stack developer with a strong background in web development, automation, and mobile applications. As a proud graduate of WeThinkCode_, I've honed my ability to... <a href="#" onclick="showPopup()">click to read more</a></p>
+        </div>
         
-            <div class="burger-menu" id="menuBtn">
-                <div class="top">
-                    <div class="top-left"></div>
-                    <div class="top-right"></div>
-                </div>
-                
-                <div class="bottom">
-                    <div class="bottom-left"></div>
-                    <div class="bottom-right"></div>
-                </div>
-            </div>
-
-            <div class="close-menu">X</div>
-        </nav>
-
-        <nav class="desktop-nav">
-            <div class="logo">
-                Sibusiso <span>Nkabinde</span>
-            </div>
-
-            <div class="nav-links">
-                <button onclick="window.location.href='#about'">About</button>
-                <button onclick="window.location.href='#projects'">Projects</button>
-                <button id="contactBtn" onclick="window.location.href='#contacts'">Contacts</button>
-            </div>
-        </nav>
-
-        <div class="nav-popup">
-            <a href="#about" onclick="hideNav()">About</a><br><hr>
-            <a href="#projects" onclick="hideNav()">Projects</a><br><hr>
-            <a href="#contacts" onclick="hideNav()">Contacts</a><br><hr>
-            <div class="popup-shade"></div>
+        <div class="popup" id="popup">
+            <p>I'm a dedicated full-stack developer with a strong background in web development, automation, and mobile applications. As a proud graduate of WeThinkCode_, I've honed my ability to tackle complex challenges, optimize system performance, and craft intuitive user experiences that make a difference.<br><br>
+            My journey has taken me through a variety of projects, from designing interactive web platforms to streamlining workflows through automation and prototyping mobile solutions. I'm constantly driven to expand my skill set by exploring new tools, frameworks, and technologies.<br><br>
+            When I'm not coding, you'll find me diving into hackathons, experimenting with emerging tech, and collaborating with like-minded teams to create innovative and impactful solutions.</p>
+            <button onclick="hidePopup()">Close</button>
         </div>
 
-        <div class="first-section-background">
-            <span class="first-section-background-shade"></span>
+        <div class="about-content">
+            <div class="education">
+                <h3>Education</h3>
+                <p>September 2022 to December 2023</p>
+                <p class="title">INFORMATION TECHNOLOGY: SYSTEMS DEVELOPMENT (NQ5)</p>
+                <p class="title-location">WeThinkCode_</p>
+                <p>Peer-driven software development academy that focuses on practical, project-based learning. Through its intensive program, I gained hands-on experience in full-stack development, problem-solving, and automation, working with technologies like JavaScript, Python, and SQL. The curriculum emphasized collaboration, debugging, and real-world application development, preparing me to build scalable and efficient software solutions.</p>
+            </div>
+            <div class="experience">
+                <h3>Experience</h3>
+                <p>March 2024 to March 2025</p>
+                <p class="title">Junior Software Developer</p>
+                <p class="title-location">Idea Pioneers</p>
+                <p>Develop and maintain responsive, user-friendly websites based on provided designs, ensuring smooth functionality and an engaging user experience. Manage website content across platforms like WordPress, Brizy, and Swipepages, ensuring brand consistency and alignment with client expectations. Automate repetitive tasks, such as securely encrypting and distributing payslips to individuals. Implement and optimize webhooks to improve website integrations and streamline data flow for enhanced efficiency.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="first-section-content">
-            <div class="container">
-                <h1>Software Developer &lt;/&gt;</h1>
-                <h2>Web developer | APIs | Automation</h2>
-                <p>
-                    I'm a passionate software developer focused on building scalable, efficient, and user-centric solutions. With expertise in web development, automation, APIs, and mobile apps, I thrive on creating impactful software. I value collaboration, continuous learning, and staying ahead of industry trends to keep my work innovative and future-ready.
-                </p>
-                <button onclick="window.location.href='#contacts'">
-                    <span class="material-icons">subdirectory_arrow_right</span>
-                    <span>Work with me today</span>
-                </button>
-                <div class="social-links">
-                    <span class="email-icon-container">
-                        <a href="mailto:nkabinde17sibusiso@gmail.com" target="_blank">
-                            <span class="material-icons icon-border mail-icon">mail</span>
-                        </a>
-                    </span>
-
-                    <span class="icon">
-                        <a href="https://github.com/GIftSibusiso" target="_blank">
-                            <img src="assets/images/github.png" alt="github icon" class="icon-border">
-                        </a>
-                    </span>
-
-                    <span class="icon">
-                        <a href="https://linkedin.com/in/sibusiso-nkabinde-589ba5207" target="_blank">
-                            <img src="assets/images/linkedin.png" alt="linkedin" class="icon-border">
-                        </a>
-                    </span>
-
-                    <span class="icon">
-                        <a href="https://wa.me/+27632026810" target="_blank">
-                            <img src="assets/images/whatsapp.png" alt="whatsapp" class="whatsapp-icon">
-                        </a>
-                    </span>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <img src="assets/images/lekkermail-dashboard.png" alt="Project 1">
+                <h3>Lekker Mail</h3>
+                <p><a href="https://lekkermail.live/">Click to see project</a></p>
+                <div class="stack-icons">
+                    <img src="assets/logos/python.png" alt="Python">
+                    <img src="assets/logos/js.png" alt="JavaScript">
+                    <img src="assets/logos/html-5.png" alt="HTML">
+                    <img src="assets/logos/css-3.png" alt="CSS">
+                    <img src="assets/logos/azure.png" alt="Azure">
+                    <img src="assets/logos/Primary_Horizontal_Lockup_Full_Color_Inverted.png" alt="Firebase">
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="assets/images/edu-connect.jpg" alt="Project 2">
+                <h3>Edu Connect</h3>
+                <p><a href="https://giftsibusiso.github.io/edu-connect/">Click to see project</a></p>
+                <div class="stack-icons">
+                    <img src="assets/logos/flutter-logo.png" alt="Flutter">
+                    <img src="assets/logos/Primary_Horizontal_Lockup_Full_Color_Inverted.png" alt="Firebase">
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="assets/images/calculator.png" alt="Porject screenshot">
+                <h3>Project 3 Name</h3>
+                <p><a href="#">Click to see more</a></p>
+                 <div class="stack-icons">
+                    <img src="assets/logos/html-5.png" alt="HTML">
+                    <img src="assets/logos/css-3.png" alt="CSS">
+                    <img src="assets/logos/js.png" alt="JavaScript">
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="about-section" id="about">
-            <div class="section-header"><h2>About myself</h2></div>
-            
-            <h2 class="my-name">Sibusiso Nkabinde</h2>
-
-            <div class="about-container">
-                <div class="description">
-                    <p>
-                        Im a dedicated full-stack developer with a strong background in web development, automation, and mobile applications. As a proud graduate of WeThinkCode_, I've honed my ability to tackle complex challenges, optimize system performance, and craft intuitive user experiences that make a difference.
-                    </p>
+    <section id="contact">
+        <div class="contact-header-container">
+            <h2>Get in Touch</h2>
+            <p>Feel free to reach out to me for collaborations, inquiries, or just a friendly chat!</p>
+        </div>
+        
+        <div class="contact-links">
+            <a href="mailto:nkabinde17sibusiso@gmail.com">
+                <span class="material-icons icon-border mail-icon">mail</span>
+            </a> 
+            <a href="https://linkedin.com/in/sibusiso-nkabinde-589ba5207" target="_blank">
+                <img src="assets/images/linkedin.png" alt="">
+            </a> 
+            <a href="https://wa.me/+27632026810" target="_blank">
+                <img src="assets/images/whatsapp.png" alt="">
+            </a>
+        </div>
     
-                    <p>
-                        My journey has taken me through a variety of projects, from designing interactive web platforms to streamlining workflows through automation and prototyping mobile solutions. I'm constantly driven to expand my skill set by exploring new tools, frameworks, and technologies.
-                    </p>
-    
-                    <p>
-                        When I'm not coding, you'll find me diving into hackathons, experimenting with emerging tech, and collaborating with like-minded teams to create innovative and impactful solutions.
-                    </p>
-
-                    <button onclick="window.location.href='#contacts'">
-                        <span class="material-icons">group_add</span>
-                        <span>Let's connect</span>
-                    </button>
-                </div>
-
-                <div class="skillset">
-                    <div class="header">
-                        <span class="material-icons">subdirectory_arrow_right</span>
-                        <span class="heading">Education</span>
-                    </div>
-
-                    <div class="education">
-                        <h3>WeThinkCode_</h3>
-                        <h4>Software engineering</h4>
-                        <p>2022-2023</p>
-                    </div>
-
-                    <div class="header">
-                        <span class="material-icons">subdirectory_arrow_right</span>
-                        <span class="heading">Capabilities & Skills</span>
-                    </div>
-
-                    <ul>
-                        <li><span class="skill">Web Development - </span>Building responsive, high-performance web applications</li>
-                        <li><span class="skill">APIs & Integrations - </span>Developing and integrating RESTful APIs and webhooks</li>
-                        <li><span class="skill">Automation & Scripting - </span>Automating workflows and data processing.</li>
-                        <li><span class="skill">Version Control - </span>Managing code efficiently with Git and GitHub</li>
-                        <li><span class="skill">Mobile Development - </span>Creating cross-platform mobile apps</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="stack">
-                <span class="icon-background">
-                    <img src="assets/logos/css-3.png" alt="css logo">
-                </span>
-
-                <span >
-                    <img src="assets/logos/sql.png" alt="css logo">
-                </span>
-
-                <span>
-                    <img src="assets/logos/Primary_Horizontal_Lockup_Full_Color_Inverted.png" alt="css logo">
-                </span>
-
-                <span>
-                    <img src="assets/logos/django.png" alt="css logo">
-                </span>
-
-                <span class="icon-background">
-                    <img src="assets/logos/flask.svg" alt="css logo">
-                </span>
-
-                <span>
-                    <img src="assets/logos/flutter-logo.png" alt="css logo">
-                </span>
-
-                <span>
-                    <img src="assets/logos/gitlab.png" alt="css logo">
-                </span>
-
-                <span>
-                    <img src="assets/logos/html-5.png" alt="css logo">
-                </span>
-
-                <span>
-                    <img src="assets/logos/java.png" alt="css logo">
-                </span>
-
-                <span>
-                    <img src="assets/logos/js.png" alt="css logo">
-                </span>
-
-                <span class="icon-background">
-                    <img src="assets/logos/maven-svgrepo-com.svg" alt="css logo">
-                </span>
-
-                <span>
-                    <img src="assets/logos/python.png" alt="css logo">
-                </span>
-
-                <span>
-                    <img src="assets/logos/social.png" alt="css logo">
-                </span>
-
-                <span>
-                    <img src="assets/logos/wordpress.jpeg" alt="css logo">
-                </span>
-            </div>
-        </div>
-
-        <div class="projects" id="projects">
-            <div class="section-header">
-                <h2>Projects</h2>
-                <p>I enjoy turning ideas into reality through code. Here's a collection of projects I've built each one a step in my journey as a developer. From web apps to mobile prototypes, these projects reflect my growth and love for innovation.</p>
-            </div>
-
-            <div class="projects-container">
-                <div class="project" onclick="window.open('https://email-api-giftsibusisos-projects.vercel.app');">
-                    <div class="project-image">
-                        <img src="assets/projects-snippets/leeker-mail.png" alt="project image">
-                    </div>
-
-                    <div>
-                        <h3>Lekker Email</h3>
-                        <p>
-                            A web app for creating and sending personalized HTML-formatted emails with custom signatures and bulk emailing features. Easily manage campaigns, design branded emails, and reach large audiences with a few clicks. Perfect for businesses and individuals looking to simplify email marketing and boost engagement.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="project" onclick="window.open('https://giftsibusiso.github.io/edu-connect/');">
-                    <div class="project-image">
-                        <img src="assets/projects-snippets/edu-connect.jpg" alt="project image">
-                    </div>
-
-                    <div>
-                        <h3>EDU CONNECT</h3>
-                        <p>
-                            Edu Connect is an Android mobile application designed to connect learners with valuable educational resources and tutors. With Edu Connect, you can upload books and documents you believe will be helpful, categorize them accordingly, and share them with the community. Tutors can also offer lessons and assist students in any way necessary to help them succeed in their studies. The platform facilitates an easy, collaborative, and supportive learning environment.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="contact-section" id="contacts">
-            <div class="section-header">
-                <h2>Contacts</h2>
-                <p>Looking to collaborate or need a developer for your next project? Let’s connect! Share your details below.</p>
-            </div>
-
-            <div class="social-links">
-                <span class="email-icon-container">
-                    <a href="mailto:nkabinde17sibusiso@gmail.com" target="_blank">
-                        <span class="material-icons icon-border mail-icon">mail</span>
-                    </a>
-                </span>
-
-                <span class="icon">
-                    <a href="https://github.com/GIftSibusiso" target="_blank">
-                        <img src="assets/images/github.png" alt="github icon" class="icon-border">
-                    </a>
-                </span>
-
-                <span class="icon">
-                    <a href="https://linkedin.com/in/sibusiso-nkabinde-589ba5207" target="_blank">
-                        <img src="assets/images/linkedin.png" alt="linkedin" class="icon-border">
-                    </a>
-                </span>
-
-                <span class="icon">
-                    <a href="https://wa.me/+27632026810" target="_blank">
-                        <img src="assets/images/whatsapp.png" alt="whatsapp" class="whatsapp-icon">
-                    </a>
-                </span>
-            </div>
-
-            <form id="myForm">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Full Name" class="text-input" required>
-                </div>
-
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email Address" class="text-input" required>
-                </div>
-
-                <div class="form-group">
-                    <textarea id="message" name="message" placeholder="Message" class="text-input" required></textarea>
-                </div>
-
-                <div class="submit-btn">
-                    <button type="submit" id="formSubmition">Join My Network</button>
-                </div>
+        <div class="contact-form">
+            <h3>Or send me a message:</h3>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
         </div>
+    </section>
 
-        <div class="api-indicator">
-            <div class="indicator-circle"></div>
-        </div>
-
-        <hr style="margin-bottom: 50px;">
-    </main>
-    
     <script src="script.js"></script>
 </body>
 </html>
