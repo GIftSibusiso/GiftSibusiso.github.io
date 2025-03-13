@@ -286,4 +286,9 @@ section {
     .about-content {
         flex-direction: column;
     }
+
+    .popup {
+        width: 100%;
+        padding: 10px;
+    }
 }
