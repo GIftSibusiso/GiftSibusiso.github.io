@@ -292,3 +292,34 @@ section {
         padding: 10px;
     }
 }
+
+
+
+
+
+.tech-stack-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tech-stack-scroll {
+    display: inline-block;
+    animation: scrollTech 20s linear infinite; /* Adjust speed as needed */
+    white-space: nowrap; /* Ensure no line breaks */
+}
+
+.tech-stack-scroll img {
+    height: 50px; /* Adjust image size */
+    margin: 0 10px; /* Adjust spacing between images */
+    display: inline-block; /* Ensure images are in line */
+}
+
+@keyframes scrollTech {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Adjust to -50% */
+    }
+}
