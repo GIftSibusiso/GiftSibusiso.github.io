@@ -3,203 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sibusiso Nkabinde - Portfolio</title>
+    <title>Sibusiso Nkabinde | Full-Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="loading-screen.css">
     <link rel="shortcut icon" href="assets/images/myself.jpg" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav>
-        <div>Sibusiso Nkabinde</div>
+        <div class="nav-logo">Sibusiso Nkabinde</div>
         <ul class="desktop-nav-items">
-            <li><a href="#about">About Myself</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Get in Touch</a></li>
-            <li><a href="#about">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-
         <button id="menuBtn">
-            <span class="material-icons" id="menuIcon">menu</span>
+            <i class="fas fa-bars"></i>
         </button>
     </nav>
-    <div class="nav-items">
-        <a href="#about">About Myself</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Get in Touch</a>
-        <a href="#about">Experience</a>
-    </div>
-
-    <div class="loading-container">
-        <div class="loading-img">
-            <img src="assets/images/myself.jpg" alt="Myself">
-        </div>
-
-        <div class="loading-indicator"></div>
-
-        <div class="loading-indicator1"></div>
-
-        <div class="loading-indicator2"></div>
-
-        <button id="loadingSkipBtn">Skip >>></button>
-    </div>
-
-    <section class="hero">
-        <h1>Hi, I am Sibusiso Nkabinde</h1>
-        <h2>Software Developer &lt;/&gt;</h2>
-        <p>Turning coffee into code and ideas into impactful software. Welcome to my digital playground!</p>
-        <a href="#about" class="cta">Know More About Me</a>
-        <div class="contact-icons">
-            <a href="https://github.com/GIftSibusiso" target="_blank">
-                <img src="assets/images/github.png" alt="">
-            </a>
-            <a href="mailto:nkabinde17sibusiso@gmail.com">
-                <span class="material-icons icon-border mail-icon">mail</span>
-            </a>
-            <a href="https://linkedin.com/in/sibusiso-nkabinde-589ba5207" target="_blank">
-                <img src="assets/images/linkedin.png" alt="">
-            </a>
-            <a href="https://wa.me/+27632026810" target="_blank">
-                <img src="assets/images/whatsapp.png" alt="">
-            </a>
-        </div>
-
-        <div class="code-container">
-            <div class="code-editor" id="codeEditor">
-                <pre><span id="codeContent"></span></pre>
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="section-header">
-            <h2>About Myself</h2>
-            <p>I'm a dedicated full-stack developer with a strong background in web development, automation, and mobile applications. As a proud graduate of WeThinkCode_, I've honed my ability to... <a href="#" onclick="showPopup()">click to read more</a></p>
-        </div>
-        
-        <div class="popup" id="popup">
-            <p>I'm a dedicated full-stack developer with a strong background in web development, automation, and mobile applications. As a proud graduate of WeThinkCode_, I've honed my ability to tackle complex challenges, optimize system performance, and craft intuitive user experiences that make a difference.<br><br>
-            My journey has taken me through a variety of projects, from designing interactive web platforms to streamlining workflows through automation and prototyping mobile solutions. I'm constantly driven to expand my skill set by exploring new tools, frameworks, and technologies.<br><br>
-            When I'm not coding, you'll find me diving into hackathons, experimenting with emerging tech, and collaborating with like-minded teams to create innovative and impactful solutions.</p>
-            <button onclick="hidePopup()">Close</button>
-        </div>
-
-        <div class="about-content">
-            <div class="education">
-                <h3>Education</h3>
-                <p>September 2022 to December 2023</p>
-                <p class="title">INFORMATION TECHNOLOGY: SYSTEMS DEVELOPMENT (NQ5)</p>
-                <p class="title-location">WeThinkCode_</p>
-                <p>Peer-driven software development academy that focuses on practical, project-based learning. Through its intensive program, I gained hands-on experience in full-stack development, problem-solving, and automation, working with technologies like JavaScript, Python, and SQL. The curriculum emphasized collaboration, debugging, and real-world application development, preparing me to build scalable and efficient software solutions.</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="tech-stack-container">
-        <div class="tech-stack-scroll">
-            <img src="assets/logos/azure.png" alt="Azure">
-            <img src="assets/logos/css-3.png" alt="CSS">
-            <img src="assets/logos/django-logo-positive.png" alt="Django Positive">
-            <img src="assets/logos/django.png" alt="Django">
-            <img src="assets/logos/flask.svg" alt="Flask">
-            <img src="assets/logos/flutter-logo.png" alt="Flutter">
-            <img src="assets/logos/gitlab.png" alt="GitLab">
-            <img src="assets/logos/html-5.png" alt="HTML">
-            <img src="assets/logos/java.png" alt="Java">
-            <img src="assets/logos/js.png" alt="JavaScript">
-            <img src="assets/logos/maven-svgrepo-com.svg" alt="Maven">
-            <img src="assets/logos/Primary_Horizontal_Lockup_Full_Color_Inverted.png" alt="AWS">
-            <img src="assets/logos/python.png" alt="Python">
-            <img src="assets/logos/social.png" alt="Social">
-            <img src="assets/logos/sql.png" alt="SQL">
-            <img src="assets/logos/wordpress.jpeg" alt="WordPress">
-            <img src="assets/logos/azure.png" alt="Azure">
-            <img src="assets/logos/css-3.png" alt="CSS">
-            <img src="assets/logos/django-logo-positive.png" alt="Django Positive">
-            <img src="assets/logos/django.png" alt="Django">
-            <img src="assets/logos/flask.svg" alt="Flask">
-            <img src="assets/logos/flutter-logo.png" alt="Flutter">
-            <img src="assets/logos/gitlab.png" alt="GitLab">
-            <img src="assets/logos/html-5.png" alt="HTML">
-            <img src="assets/logos/java.png" alt="Java">
-            <img src="assets/logos/js.png" alt="JavaScript">
-            <img src="assets/logos/maven-svgrepo-com.svg" alt="Maven">
-            <img src="assets/logos/Primary_Horizontal_Lockup_Full_Color_Inverted.png" alt="AWS">
-            <img src="assets/logos/python.png" alt="Python">
-            <img src="assets/logos/social.png" alt="Social">
-            <img src="assets/logos/sql.png" alt="SQL">
-            <img src="assets/logos/wordpress.jpeg" alt="WordPress">
-        </div>
-    </div>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-cards">
-            <div class="project-card">
-                <img src="assets/images/lekkermail-dashboard.png" alt="Project 1">
-                <h3>Lekker Mail</h3>
-                <p><a href="https://lekkermail.live/">Click to see project</a></p>
-                <div class="stack-icons">
-                    <img src="assets/logos/python.png" alt="Python">
-                    <img src="assets/logos/js.png" alt="JavaScript">
-                    <img src="assets/logos/html-5.png" alt="HTML">
-                    <img src="assets/logos/css-3.png" alt="CSS">
-                    <img src="assets/logos/azure.png" alt="Azure">
-                    <img src="assets/logos/Primary_Horizontal_Lockup_Full_Color_Inverted.png" alt="Firebase">
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="assets/images/edu-connect.jpg" alt="Project 2">
-                <h3>Edu Connect</h3>
-                <p><a href="https://giftsibusiso.github.io/edu-connect/">Click to see project</a></p>
-                <div class="stack-icons">
-                    <img src="assets/logos/flutter-logo.png" alt="Flutter">
-                    <img src="assets/logos/Primary_Horizontal_Lockup_Full_Color_Inverted.png" alt="Firebase">
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="assets/images/calculator.png" alt="Porject screenshot">
-                <h3>Project 3 Name</h3>
-                <p><a href="https://giftsibusiso.github.io/basic-calculator/">Click to see more</a></p>
-                 <div class="stack-icons">
-                    <img src="assets/logos/html-5.png" alt="HTML">
-                    <img src="assets/logos/css-3.png" alt="CSS">
-                    <img src="assets/logos/js.png" alt="JavaScript">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact-header-container">
-            <h2>Get in Touch</h2>
-            <p>Feel free to reach out to me for collaborations, inquiries, or just a friendly chat!</p>
-        </div>
-        
-        <div class="contact-links">
-            <a href="mailto:nkabinde17sibusiso@gmail.com">
-                <span class="material-icons icon-border mail-icon">mail</span>
-            </a> 
-            <a href="https://linkedin.com/in/sibusiso-nkabinde-589ba5207" target="_blank">
-                <img src="assets/images/linkedin.png" alt="">
-            </a> 
-            <a href="https://wa.me/+27632026810" target="_blank">
-                <img src="assets/images/whatsapp.png" alt="">
-            </a>
-        </div>
     
-        <div class="contact-form">
-            <h3>Or send me a message:</h3>
-            <form id="contactForm">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="close-btn" id="closeBtn">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Loading Screen -->
+    <div class="loading-container" id="loadingScreen">
+        <div class="loading-img">
+            <img src="assets/images/myself.jpg" alt="Sibusiso Nkabinde">
+        </div>
+        <div class="loading-indicator"></div>
+        <button id="loadingSkipBtn">Skip Intro</button>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm Sibusiso Nkabinde</h1>
+                <h2>Full-Stack Developer</h2>
+                <p>Turning coffee into code and ideas into impactful software. Welcome to my digital playground!</p>
+                <a href="#about" class="cta">Explore My Work</a>
+                <div class="contact-icons">
+                    <a href="https://github.com/GIftSibusiso" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:nkabinde17sibusiso@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/sibusiso-nkabinde-589ba5207" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/+27632026810" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/myself.jpg" alt="Sibusiso Nkabinde">
+            </div>
         </div>
     </section>
-
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>I'm a passionate full-stack developer dedicated to creating elegant solutions to complex problems.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a dedicated full-stack developer with a strong background in web development, automation, and mobile applications. As a proud graduate of WeThinkCode_, I've honed my ability to tackle complex challenges, optimize system performance, and craft intuitive user experiences that make a difference.</p>
+                    <p>My journey has taken me through a variety of projects, from designing interactive web platforms to streamlining workflows through automation and prototyping mobile solutions. I'm constantly driven to expand my skill set by exploring new tools, frameworks, and technologies.</p>
+                </div>
+                
+                <div class="education">
+                    <h3>Education</h3>
+                    <p>September 2022 to December 2023</p>
+                    <p class="title">INFORMATION TECHNOLOGY: SYSTEMS DEVELOPMENT (NQ5)</p>
+                    <p class="title-location">WeThinkCode_</p>
+                    <p>Peer-driven software development academy that focuses on practical, project-based learning. Through its intensive program, I gained hands-on experience in full-stack development, problem-solving, and automation, working with technologies like JavaScript, Python, and SQL.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tech Stack Section -->
+    <section class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technologies I Work With</h2>
+                <p>Here are some of the tools and technologies I use to bring ideas to life</p>
+            </div>
+            
+            <div class="tech-stack-container">
+                <div class="tech-stack-scroll">
+                    <img src="assets/logos/azure.png" alt="Azure" title="Azure">
+                    <img src="assets/logos/css-3.png" alt="CSS" title="CSS">
+                    <img src="assets/logos/django-logo-positive.png" alt="Django" title="Django">
+                    <img src="assets/logos/django.png" alt="Django" title="Django">
+                    <img src="assets/logos/flask.svg" alt="Flask" title="Flask">
+                    <img src="assets/logos/flutter-logo.png" alt="Flutter" title="Flutter">
+                    <img src="assets/logos/gitlab.png" alt="GitLab" title="GitLab">
+                    <img src="assets/logos/html-5.png" alt="HTML" title="HTML">
+                    <img src="assets/logos/java.png" alt="Java" title="Java">
+                    <img src="assets/logos/js.png" alt="JavaScript" title="JavaScript">
+                    <img src="assets/logos/maven-svgrepo-com.svg" alt="Maven" title="Maven">
+                    <img src="assets/logos/Primary_Horizontal_Lockup_Full_Color_Inverted.png" alt="AWS" title="AWS">
+                    <img src="assets/logos/python.png" alt="Python" title="Python">
+                    <img src="assets/logos/social.png" alt="Social" title="Social">
+                    <img src="assets/logos/sql.png" alt="SQL" title="SQL">
+                    <img src="assets/logos/wordpress.jpeg" alt="WordPress" title="WordPress">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Projects</h2>
+                <p>Here are some of my recent works that I'm proud to share</p>
+            </div>
+            
+            <div class="project-cards">
+                <div class="project-card">
+                    <img src="assets/images/lekkermail-dashboard.png" alt="Lekker Mail Dashboard">
+                    <div class="project-card-content">
+                        <h3>Lekker Mail</h3>
+                        <p>A comprehensive email management platform designed to streamline communication workflows.</p>
+                        <a href="https://lekkermail.live/" target="_blank">View Project →</a>
+                        <div class="stack-icons">
+                            <img src="assets/logos/python.png" alt="Python" title="Python">
+                            <img src="assets/logos/js.png" alt="JavaScript" title="JavaScript">
+                            <img src="assets/logos/html-5.png" alt="HTML" title="HTML">
+                            <img src="assets/logos/css-3.png" alt="CSS" title="CSS">
+                            <img src="assets/logos/azure.png" alt="Azure" title="Azure">
+                            <img src="assets/logos/Primary_Horizontal_Lockup_Full_Color_Inverted.png" alt="AWS" title="AWS">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="assets/images/edu-connect.jpg" alt="Edu Connect">
+                    <div class="project-card-content">
+                        <h3>Edu Connect</h3>
+                        <p>An educational platform connecting students with resources and learning materials.</p>
+                        <a href="https://giftsibusiso.github.io/edu-connect/" target="_blank">View Project →</a>
+                        <div class="stack-icons">
+                            <img src="assets/logos/flutter-logo.png" alt="Flutter" title="Flutter">
+                            <img src="assets/logos/Primary_Horizontal_Lockup_Full_Color_Inverted.png" alt="Firebase" title="Firebase">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="assets/images/calculator.png" alt="Calculator App">
+                    <div class="project-card-content">
+                        <h3>Interactive Calculator</h3>
+                        <p>A responsive calculator application with modern UI and advanced functionality.</p>
+                        <a href="https://giftsibusiso.github.io/basic-calculator/" target="_blank">View Project →</a>
+                        <div class="stack-icons">
+                            <img src="assets/logos/html-5.png" alt="HTML" title="HTML">
+                            <img src="assets/logos/css-3.png" alt="CSS" title="CSS">
+                            <img src="assets/logos/js.png" alt="JavaScript" title="JavaScript">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Feel free to reach out for collaborations or just to say hello!</p>
+            </div>
+            
+            <div class="contact-links">
+                <a href="mailto:nkabinde17sibusiso@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://linkedin.com/in/sibusiso-nkabinde-589ba5207" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://wa.me/+27632026810" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://github.com/GIftSibusiso" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send Me a Message</h3>
+                <form id="contactForm">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <p class="copyright">© 2023 Sibusiso Nkabinde. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,142 +1,110 @@
-document.getElementById("loadingSkipBtn").addEventListener("click", () => {
-    document.getElementsByClassName("loading-container")[0].style.display = "none";
-})
-
-function showPopup() {
-    document.getElementById('popup').style.display = 'block';
-}
-
-function hidePopup() {
-    document.getElementById('popup').style.display = 'none';
-}
-
-const codeContent = document.getElementById('codeContent');
-        const codeEditor = document.getElementById('codeEditor');
-
-        const code = `console.log("Hello, World!");\nfunction greet(name) {\n  return "Hello, " + name;\n}\nconsole.log(greet("Sibusiso"));`;
-        const emptyCode = "";
-
-        let charIndex = 0;
-        let isWriting = true;
-
-        function typeWriter() {
-            if (isWriting) {
-                if (charIndex < code.length) {
-                    codeContent.textContent = code.substring(0, charIndex + 1);
-                    charIndex++;
-                    setTimeout(typeWriter, 50); // Typing speed
-                } else {
-                    isWriting = false;
-                    setTimeout(typeWriter, 2000); // Pause before erasing
-                }
-            } else {
-                if (charIndex > 0) {
-                    codeContent.textContent = code.substring(0, charIndex - 1);
-                    charIndex--;
-                    setTimeout(typeWriter, 30); // Erasing speed
-                } else {
-                    isWriting = true;
-                    setTimeout(typeWriter, 1000); // Pause before retyping
-                }
-            }
-        }
-
-        typeWriter();
-
-
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+// Loading Screen
+document.addEventListener('DOMContentLoaded', function() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    const skipBtn = document.getElementById('loadingSkipBtn');
     
-    const name = contactForm.querySelector('input[name="name"]').value;
-    const email = contactForm.querySelector('input[name="email"]').value;
-    const message = contactForm.querySelector('textarea[name="message"]').value;
+    // Show loading screen for at least 5 seconds
+    setTimeout(() => {
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.visibility = 'hidden';
+    }, 5000);
     
-    const data = {
-        "recipient-email": "nkabinde17sibusiso@gmail.com",
-        "display-name": 'Portfolio lead',
-        "subject": "Contact Form Submission from Portfolio",
-        "content": `
-<html>
-<head></head>
-<body style="background-color: #fff; color: #333; font-family: Arial, Helvetica, sans-serif;">
-    <div style="background-color: #f4f4f4; max-width: 600px; margin: 15px auto; padding: 5px;">
-
-        <!-- subject -->
-        <div style="text-align: center;font-size: 20px; font-weight: bold; padding: 8px;">
-            Contact Form Submission from Portfolio
-        </div>
-
-        <!-- horizontal line -->
-        <div style="background-color: #333; height: 2px;"></div>
-
-        <!-- main content -->
-        <div>
-            <p>Name: ${name}</p>
-            <p>Email: ${email}</p>
-            <p>Message: ${message}</p>
-        </div>
-
-        <!-- Footer -->
-        <div style="text-align: center; padding: 15px; font-size: 12px; color: #777; background: #f4f4f4; border-radius: 0 0 8px 8px;">
-            &copy; 2025 Lekker Mail. All rights reserved. <br>
-            <a href="https://lekkermail.live">lekkermail.live</a>
-        </div>
-    </div>
-</body>
-</html>        
-`,
-        "html-content": true 
-    };
-    
-    const apiKey = "SibusisoNkabindeAPIKEYYoullneverget"; // Replace with your actual API key
-    
-    fetch('https://lekkermail.live/v1/send-email', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-API-Key': apiKey
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => {
-        if (!response.ok) {
-            return response.json().then(errorData => {
-                throw new Error(errorData.error || 'Network response was not ok');
-            });
-        }
-        return response.json();
-    })
-    .then(data => {
-        alert('Message sent successfully!');
-        contactForm.reset(); // Clear the form
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error sending the message. Please try again later.');
+    skipBtn.addEventListener('click', () => {
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.visibility = 'hidden';
     });
+    
+    // Mobile Navigation
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay = document.getElementById('overlay');
+    
+    menuBtn.addEventListener('click', () => {
+        mobileNav.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+    
+    closeBtn.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+    
+    overlay.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    }
 });
 
-document.getElementById('menuBtn').addEventListener('click', () => {
-    toggleMobileNav()
-})
-
-document.getElementsByClassName('nav-items')[0].addEventListener('click', () => {
-    toggleMobileNav
-})
-
-function toggleMobileNav() {
-    const menuIcon = document.getElementById('menuIcon');
-
-    if (menuIcon.innerText === 'menu') {
-        menuIcon.innerText = 'close';
-        menuIcon.style.color = 'red';
-        document.getElementsByClassName('nav-items')[0].style.display = 'flex';
-    } else {
-        menuIcon.innerText = 'menu';
-        menuIcon.style.color = '#fff';
-        document.getElementsByClassName('nav-items')[0].style.display = 'none';
+// Typewriter effect for code editor
+const codeContent = document.getElementById('codeContent');
+if (codeContent) {
+    const codeLines = [
+        '<span class="comment">// Welcome to my portfolio</span>',
+        'const developer = {',
+        '  name: "Sibusiso Nkabinde",',
+        '  role: "Full-Stack Developer",',
+        '  skills: ["JavaScript", "Python", "Flutter", "Django"],',
+        '  passion: "Building impactful software solutions"',
+        '};',
+        '',
+        '<span class="keyword">function</span> <span class="function">createProject</span>(idea) {',
+        '  <span class="keyword">return</span> idea + <span class="string">" brought to life with clean code!"</span>;',
+        '}'
+    ];
+    
+    let currentLine = 0;
+    let currentChar = 0;
+    let typingInterval;
+    
+    function typeWriter() {
+        if (currentLine < codeLines.length) {
+            if (currentChar < codeLines[currentLine].length) {
+                codeContent.innerHTML += codeLines[currentLine].charAt(currentChar);
+                currentChar++;
+            } else {
+                codeContent.innerHTML += '<br>';
+                currentLine++;
+                currentChar = 0;
+            }
+        } else {
+            clearInterval(typingInterval);
+        }
     }
+    
+    typingInterval = setInterval(typeWriter, 50);
 }
-
