@@ -344,7 +344,7 @@ nav {
     display: flex;
     gap: 2rem;
     padding: 1.5rem 0;
-    animation: scroll 30s linear infinite;
+    animation: scroll 12s linear infinite;
 }
 
 .tech-stack-scroll img {
