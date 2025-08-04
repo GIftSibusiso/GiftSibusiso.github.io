@@ -121,7 +121,7 @@ async function postData(subpath, payload) {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(payload)
+      body: payload
     });
 
     const data = await response.json();
