@@ -62,8 +62,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact form submission
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
+
+            const formData = new FormData(this);
+            postData('portfolio-submissions', {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                message: formData.get('message')
+            });
+
             alert('Thank you for your message! I will get back to you soon.');
             this.reset();
         });
@@ -107,4 +115,22 @@ if (codeContent) {
     }
     
     typingInterval = setInterval(typeWriter, 50);
+}
+
+
+async function postData(subpath, payload) {
+  try {
+    const response = await fetch(`/api/v1/submit/${encodeURIComponent(subpath)}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await response.json();
+    console.log("POST response:", data);
+  } catch (error) {
+    console.error("POST error:", error);
+  }
 }
