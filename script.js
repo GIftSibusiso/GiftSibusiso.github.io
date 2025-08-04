@@ -116,7 +116,7 @@ if (codeContent) {
 
 async function postData(subpath, payload) {
   try {
-    const response = await fetch(`/api/v1/submit/${encodeURIComponent(subpath)}`, {
+    const response = await fetch(`https://form-submissions-five.vercel.app/api/v1/submit/${subpath}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
