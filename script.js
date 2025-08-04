@@ -66,11 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
 
             const formData = new FormData(this);
-            postData('portfolio-submissions', {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                message: formData.get('message')
-            });
+            postData('portfolio-submissions', Object.fromEntries(formData.entries()));
 
             alert('Thank you for your message! I will get back to you soon.');
             this.reset();
