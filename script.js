@@ -66,11 +66,11 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
 
             const formData = new FormData(this);
-            await postData('portfolio-submissions', {
+            await postData('portfolio-submissions', JSON.stringify({
                 name: formData.get('name'),
                 email: formData.get('email'),
                 message: formData.get('message')
-            });
+            }));
 
             alert('Thank you for your message! I will get back to you soon.');
             this.reset();
