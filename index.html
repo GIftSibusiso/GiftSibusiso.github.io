@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="assets/images/myself.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -18,6 +17,9 @@
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="assets/pdfs/Sibusiso Gift Nkabinde - Curriculum Vitae.pdf" download class="download-cv-btn">
+                <i class="fas fa-download"></i> Download CV
+            </a></li>
         </ul>
         <button id="menuBtn">
             <i class="fas fa-bars"></i>
@@ -32,6 +34,9 @@
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <a href="assets/pdfs/Sibusiso Gift Nkabinde - Curriculum Vitae.pdf" download class="download-cv-btn">
+            <i class="fas fa-download"></i> Download CV
+        </a>
     </div>
     <div class="overlay" id="overlay"></div>
     
@@ -51,7 +56,12 @@
                 <h1>Hi, I'm Sibusiso Nkabinde</h1>
                 <h2>Full-Stack Developer</h2>
                 <p>Turning coffee into code and ideas into impactful software. Welcome to my digital playground!</p>
-                <a href="#about" class="cta">Explore My Work</a>
+                <div class="hero-buttons">
+                    <a href="#about" class="cta">Explore My Work</a>
+                    <a href="assets/pdfs/Sibusiso Gift Nkabinde - Curriculum Vitae.pdf" download class="cta secondary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
                 <div class="contact-icons">
                     <a href="https://github.com/GIftSibusiso" target="_blank" aria-label="GitHub">
                         <i class="fab fa-github"></i>
@@ -85,14 +95,15 @@
                 <div class="about-text">
                     <p>I'm a dedicated full-stack developer with a strong background in web development, automation, and mobile applications. As a proud graduate of WeThinkCode_, I've honed my ability to tackle complex challenges, optimize system performance, and craft intuitive user experiences that make a difference.</p>
                     <p>My journey has taken me through a variety of projects, from designing interactive web platforms to streamlining workflows through automation and prototyping mobile solutions. I'm constantly driven to expand my skill set by exploring new tools, frameworks, and technologies.</p>
+                    <a href="assets/pdfs/Sibusiso Gift Nkabinde - Curriculum Vitae.pdf" download class="download-cv-btn about-cv-btn">
+                        <i class="fas fa-download"></i> Download My CV
+                    </a>
                 </div>
                 
                 <div class="education">
-                    <h3>Education</h3>
-                    <p>September 2022 to December 2023</p>
-                    <p class="title">INFORMATION TECHNOLOGY: SYSTEMS DEVELOPMENT (NQ5)</p>
-                    <p class="title-location">WeThinkCode_</p>
-                    <p>Peer-driven software development academy that focuses on practical, project-based learning. Through its intensive program, I gained hands-on experience in full-stack development, problem-solving, and automation, working with technologies like JavaScript, Python, and SQL.</p>
+                    <h3>Technical Approach</h3>
+                    <p>My development philosophy centers around creating scalable, maintainable solutions that not only meet current requirements but are also prepared for future growth. I believe in clean code, thorough testing, and user-centered design.</p>
+                    <p>Whether working on front-end interfaces or back-end systems, I focus on creating seamless experiences that bridge the gap between technology and human needs.</p>
                 </div>
             </div>
         </div>
@@ -138,6 +149,37 @@
             </div>
             
             <div class="project-cards">
+                <!-- WhatsApp + Gemini Bot Project -->
+                <div class="project-card">
+                    <div class="project-video">
+                        <!-- Video Container for proper aspect ratio -->
+                        <div class="video-container">
+                            <video controls poster="assets/projects-snippets/whatsapp-bot-thumbnail.png">
+                                <source src="assets/projects-snippets/whatsapp-bot-demo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <!-- Fallback if video fails to load -->
+                            <div class="video-fallback">
+                                <i class="fas fa-play-circle"></i>
+                                <p>WhatsApp + Gemini Bot Demo</p>
+                                <a href="assets/projects-snippets/whatsapp-bot-demo.mp4" target="_blank" class="fallback-link">
+                                    Open Video
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-content">
+                        <h3>WhatsApp + Gemini AI Bot</h3>
+                        <p>An AI WhatsApp bot that replies with my personality using Gemini AI. Remembers chat context, matches my vibe, and keeps conversations flowing when I'm unavailable. Features one-time login and customizable responses.</p>
+                        <a href="https://github.com/GIftSibusiso/Whatsapp-Gemini-Bot" target="_blank" class="view-demo-btn">
+                            <i class="fas fa-play"></i> View on GitHub
+                        </a>
+                        <div class="stack-icons">
+                            <img src="assets/logos/js.png" alt="JavaScript" title="JavaScript">
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <img src="assets/images/lekkermail-dashboard.png" alt="Lekker Mail Dashboard">
                     <div class="project-card-content">
@@ -165,9 +207,6 @@
                             <img src="assets/logos/html-5.png" alt="HTML" title="HTML">
                             <img src="assets/logos/css-3.png" alt="CSS" title="CSS">
                             <img src="assets/logos/js.png" alt="JavaScript" title="JavaScript">
-                            <img src="assets/logos/wordpress.png" alt="WordPress" title="WordPress">
-                            <img src="assets/logos/php.png" alt="PHP" title="PHP">
-                            <img src="assets/logos/api.png" alt="API Integration" title="API Integration">
                         </div>
                     </div>
                 </div>
@@ -181,20 +220,6 @@
                         <div class="stack-icons">
                             <img src="assets/logos/flutter-logo.png" alt="Flutter" title="Flutter">
                             <img src="assets/logos/Primary_Horizontal_Lockup_Full_Color_Inverted.png" alt="Firebase" title="Firebase">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <img src="assets/images/calculator.png" alt="Calculator App">
-                    <div class="project-card-content">
-                        <h3>Interactive Calculator</h3>
-                        <p>A responsive calculator application with modern UI and advanced functionality.</p>
-                        <a href="https://giftsibusiso.github.io/basic-calculator/" target="_blank">View Project →</a>
-                        <div class="stack-icons">
-                            <img src="assets/logos/html-5.png" alt="HTML" title="HTML">
-                            <img src="assets/logos/css-3.png" alt="CSS" title="CSS">
-                            <img src="assets/logos/js.png" alt="JavaScript" title="JavaScript">
                         </div>
                     </div>
                 </div>
